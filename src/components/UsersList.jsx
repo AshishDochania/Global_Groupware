@@ -59,7 +59,7 @@ const UsersList = () => {
       <div className="pagination">
         <button disabled={page === 1} onClick={() => setPage(page - 1)}>Prev</button>
         <span>Page {page}</span>
-        <button onClick={() => setPage(page + 1)}>Next</button>
+        <button onClick={() => setPage(page + 1)} disabled={users.length===0}>Next</button>
       </div>
 
       {editingUser && (
